@@ -24,12 +24,13 @@ A modern, responsive Todo application built with React and TypeScript, featuring
 
 - Node.js (v16 or higher)
 - npm or yarn package manager
+- Vercel account (for deployment)
 
 ## Installation & Usage
 
 Choose **one** of the package managers and use it consistently:
 
-### Usaging with npm
+### Usage with npm
 
 ```bash
 # Install dependencies
@@ -45,7 +46,7 @@ npm test
 npm run build
 ```
 
-### Usaging with yarn
+### Usage with yarn
 
 ```bash
 # Install dependencies
@@ -62,6 +63,37 @@ yarn build
 ```
 
 The application will be available at `http://localhost:3000` by default.
+
+## Deployment
+
+This application is configured for deployment on Vercel. Follow these steps:
+
+1. Install Vercel CLI (optional):
+```bash
+npm i -g vercel
+# or
+yarn global add vercel
+```
+
+2. Deploy to Vercel:
+
+### Using Vercel CLI:
+```bash
+vercel
+```
+
+### Using Vercel Dashboard:
+1. Push your code to GitHub
+2. Import your repository in Vercel Dashboard
+3. Configure the following build settings:
+   - Build Command: `yarn build` or `npm run build`
+   - Output Directory: `dist`
+   - Install Command: `yarn` or `npm install`
+
+The application uses the following deployment configuration (defined in `vercel.json`):
+- Build output directory: `dist`
+- Framework preset: `vite`
+- Automatic handling of client-side routing
 
 ## Project Structure
 
